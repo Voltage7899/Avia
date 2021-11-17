@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "968580393273",
+    "project_id": "buyticket-91397",
+    "storage_bucket": "buyticket-91397.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968580393273:android:ac3782c40d088524cd20e8",
+        "android_client_info": {
+          "package_name": "com.company.buytickey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968580393273-d1c6eat76cp7tv4tsu0kdf19f42udalu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.buytickey",
+            "certificate_hash": "2733802cecee92d1c844b2c78a9809bef06f7e47"
+          }
+        },
+        {
+          "client_id": "968580393273-8nhucvqgi7n75o8eeb568cffbm845p3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5hp_4nQ5W30a9ProndX4pCiBOcken1OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968580393273-8nhucvqgi7n75o8eeb568cffbm845p3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
