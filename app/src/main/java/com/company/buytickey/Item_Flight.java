@@ -28,7 +28,7 @@ public class Item_Flight extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item__flight);
-
+        //Привязываем поля к переменным
         name=findViewById(R.id.name_item);
         departure=findViewById(R.id.departure_item);
         landing=findViewById(R.id.landing_item);
@@ -37,11 +37,11 @@ public class Item_Flight extends AppCompatActivity {
         image=findViewById(R.id.image_item);
         button=findViewById(R.id.buy_item);
 
-
+        //Получаем данные из интента
         id_from_intent=getIntent().getExtras().get("flight_id").toString();
-
+        //получаем ссылку
         databaseReference= FirebaseDatabase.getInstance().getReference();
-
+        //слушатель на взаимодействие с базой данных
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -55,6 +55,7 @@ public class Item_Flight extends AppCompatActivity {
                     image.setImageURI(Uri.parse(flight.getImage()));
                 }
                 else {
+                    //Выводит всплывающее сообщение
                     Toast.makeText(Item_Flight.this, "Рейса не существует", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -67,6 +68,7 @@ public class Item_Flight extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Выводит всплывающее сообщение
                 Toast.makeText(Item_Flight.this, "Данные высланы в смс", Toast.LENGTH_SHORT).show();
             }
         });

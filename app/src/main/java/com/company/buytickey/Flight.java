@@ -1,6 +1,7 @@
 package com.company.buytickey;
 
 public class Flight {
+    //Модель данных полета
     private String price,departure,landing,from,to;
     private String image;
     private String id;

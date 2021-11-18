@@ -33,7 +33,7 @@ public class add__flight extends AppCompatActivity {
     private EditText name_field, departure_field,landing_field,from_field,to_field;
     private ImageView img_field;
     private Button add_db;
-    //ссылку ты уже знаешь,умничка моя
+    //ссылку ты уже знаешь
     private DatabaseReference database;
 
     @Override
@@ -49,7 +49,7 @@ public class add__flight extends AppCompatActivity {
         img_field = findViewById(R.id.image_add);
 
         add_db = findViewById(R.id.add);
-
+        //устанавливаем слушателя
         add_db.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +87,7 @@ public class add__flight extends AppCompatActivity {
 
         });
 
-
+        //слушатель на картинку
         img_field.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,13 +133,13 @@ public class add__flight extends AppCompatActivity {
         SweatMap.put("from",from);
         SweatMap.put("to",to);
         SweatMap.put("image",image);
-//Здесь мы пихаем данные в бд через Хэшмэп и делаем проверку на результат
+        //Здесь мы пихаем данные в бд через Хэшмэп и делаем проверку на результат
         database.child(id).updateChildren(SweatMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(add__flight.this, "Товар добавлен", Toast.LENGTH_SHORT).show();
-
+                    //finish возвращает нас обратно если успешно
                     finish();
                 }
                 else {
